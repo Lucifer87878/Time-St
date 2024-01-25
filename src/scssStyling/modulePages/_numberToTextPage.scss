@@ -1,0 +1,91 @@
+.page-six {
+  height: 100vh;
+  @include justdirection(column);
+
+  .header-interval {
+    margin-top: 60px;
+    color: $color-white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    .interval {
+      flex: 1;
+      text-align: center;
+      font-size: $base-size-xllarge;
+     
+    }
+  }
+  .timer-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      to left,
+      $color-black,
+      $color-gray-darker,
+      $color-gray-dark,
+      $color-gray-darker,
+      $color-black
+    );
+    .time-left {
+      max-height: 500px;
+      @include justdirection(column);
+      align-items: center;
+      justify-content: center;
+
+      flex: 1;
+
+      #minutes,
+      #seconds {
+        font-size: $base-size-large;
+        font-weight: bold;
+        margin: 20px;
+        color: $color-white;
+      }
+    }
+  }
+
+  .btn-container {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .abort-timer {
+      background: none;
+      color: $color-white;
+      border: 1px solid $color-white;
+      padding: 10px;
+      margin: 1em;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .page-six {
+    .header-interval {
+      .interval {
+        font-size: $base-size-xlarge;
+      }
+    }
+    .timer-container {
+      .time-left {
+        #minutes,
+        #seconds {
+          font-size: $base-size-xllarge;
+        }
+      }
+    }
+
+    .btn-container {
+      padding: 10px;
+      .abort-timer {
+        font-size: $base-size-large;
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.page-five {
+  height: 100vh;
+  @include flexdirection(column);
+  background-color: black;
+
+  .header-interval {
+    margin-top: 100px;
+    color: $color-white;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    .interval {
+      flex: 1;
+      text-align: center;
+      font-size: $base-size-large;
+    }
+  }
+
+  #timer-bar {
+    margin-top: 60px;
+    background: linear-gradient(
+      to left,
+      $color-gray-darker,
+      $color-gray-light,
+      $color-pink-light,
+      $color-gray-light,
+      $color-gray-darker
+    );
+    box-shadow: 5px 5px 20px $color-gray-light;
+    border-radius: 5px;
+    width: 200px;
+    transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  }
+
+  .btn-container {
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: 80px;
+    .abort-timer {
+      background: none;
+      color: $color-white;
+      border: 1px solid $color-white;
+      padding: 10px;
+      margin: 1em;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .page-five {
+    .header-interval {
+      margin-top: 80px;
+      .interval {
+        font-size: $base-size-xlarge;
+      }
+    }
+
+    #timer-bar {
+      margin-top: 80px;
+      width: 350px;
+    }
+
+    .btn-container {
+      .abort-timer {
+        font-size: $base-size-large;
+      }
+    }
+  }
+}

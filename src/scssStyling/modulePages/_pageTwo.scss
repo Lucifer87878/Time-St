@@ -1,0 +1,110 @@
+.timer-container {
+  height: 100vh;
+  background-color: $color-gray-dark;
+  @include flexdirection(column);
+
+  .time-setter {
+    @include flexdirection(row);
+    margin-top: 20px;
+
+    #time-display {
+      margin: 5px;
+      font-size: $base-size-large;
+      color: whitesmoke;
+      padding: 3px;
+      border-radius: 5px;
+    }
+    i {
+      color: $color-white;
+      font-size: 3em;
+    }
+    i:hover {
+      cursor: pointer;
+    }
+  }
+  button {
+    background: none;
+    color: $color-white;
+    border: 1px solid $color-white;
+    padding: 10px;
+    margin: 1em;
+    font-size: $base-size-xsmall;
+    cursor: pointer;
+    outline: inherit;
+    text-transform: uppercase;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+.options {
+  @include justdirection(column);
+  margin: 50px 0;
+
+  label {
+    @include justdirection(row);
+    margin-bottom: 20px;
+    color: $color-white;
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+    }
+    #interval,
+    #break-interval {
+      font-size: $base-size-medium;
+    }
+  }
+}
+#start-timer,
+#stop-timer {
+  background: none;
+  color: $color-white;
+  border: 1px solid $color-white;
+  padding: 10px;
+  margin: 1em;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 601px) {
+  .timer-container {
+    .time-setter {
+      @include flexdirection(row);
+      margin-top: 20px;
+
+      #time-display {
+        font-size: $base-size-xllarge;
+        margin: 25px;
+      }
+      i {
+        color: $color-white;
+        font-size: 5em;
+      }
+      i:hover {
+        cursor: pointer;
+      }
+    }
+
+    .options {
+      label {
+        input[type="checkbox"] {
+          width: 30px;
+          height: 30px;
+        }
+        #interval,
+        #break-interval {
+          font-size: $base-size-large;
+        }
+      }
+    }
+    #start-timer,
+    #stop-timer {
+      font-size: $base-size-large;
+    }
+  }
+}

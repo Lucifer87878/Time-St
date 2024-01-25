@@ -1,0 +1,30 @@
+//variables & functions
+@import "./Functions/functions";
+@import "./Functions/mixins";
+
+@import "./Variables/variables";
+
+//pages
+@import "./modulePages/sidaett";
+@import "./modulePages/pageTwo";
+@import "./modulePages/startPage";
+@import "./modulePages/pauseTimerPage";
+@import "./modulePages/Times-UP";
+@import "./modulePages/numberToTextPage";
+@import "./modulePages/timerbarPage";
+@import "./modulePages/circleTimerPage";
+@import "./modulePages/digitalTimer";
+@import "./modulePages/analogTimer";
+
+//base & layout
+@import "./Base/base";
+
+//components button, card, navbar mm
+
+// Goran's kod
+
+@import "./Nav-Bar/reset";
+@import "./Nav-Bar/body"; 
+@import "./Nav-Bar/nav";
+@import "./Nav-Bar/sidebar";
+@import "./Nav-Bar/media-queries";
